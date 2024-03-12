@@ -3,7 +3,8 @@
 
 ## Features
 Voici les différents options disponible dans l'application pour le moment :
--
+- Features 1
+- Features 2
 
 ## Versions de l'application :
 Voici les différentes versions de l'application web sur l'utilisation des Socket.

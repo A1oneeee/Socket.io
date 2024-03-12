@@ -3,7 +3,7 @@
 
 ## Features
 Voici les différents options disponible dans l'application pour le moment :
-- 
+-
 
 ## Versions de l'application :
 Voici les différentes versions de l'application web sur l'utilisation des Socket.
@@ -11,5 +11,5 @@ Voici les différentes versions de l'application web sur l'utilisation des Socke
 - [v0.0.1]()
 
 ## Annexes
-#### Les versions de l'applications se baseront sur ces ressources
+Les versions de l'applications se baseront sur ces ressources :
 - 

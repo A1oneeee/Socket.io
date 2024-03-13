@@ -9,7 +9,7 @@ app.use(express.static(__dirname));
 
 /* LISTEN SERVER ON PORT 1337 */
 server.listen(1337, () => {
-    console.log('### Server started at port: 1337 ...');
+    console.log('Server started at port: 1337 ...');
 });
 
 
@@ -23,9 +23,19 @@ io.sockets.on('connection', function(socket){
         socket.pseudo = pseudo;
         socket.broadcast.emit('newUser', pseudo);
     });
+    socket.on('newMessage', (message) => {
+        socket.broadcast.emit('newMessageAll', {message: message, pseudo: socket.pseudo});
+    });
+
+    socket.on('writting', (pseudo) => {
+        socket.broadcast.emit('writting', pseudo);
+    });
+
+    socket.on('notWritting', () => {
+        socket.broadcast.emit('notWritting');
+    });
+
     socket.on('disconnect', () => {
-
         socket.broadcast.emit('quitUser', socket.pseudo);
-
     });
 });

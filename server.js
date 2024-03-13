@@ -19,5 +19,13 @@ server.listen(1337, () => {
 var io = require('socket.io')(server);
 
 io.sockets.on('connection', function(socket){
-    console.log("Nouvelle utilisateur");
+    socket.on('pseudo', (pseudo) => {
+        socket.pseudo = pseudo;
+        socket.broadcast.emit('newUser', pseudo);
+    });
+    socket.on('disconnect', () => {
+
+        socket.broadcast.emit('quitUser', socket.pseudo);
+
+    });
 });

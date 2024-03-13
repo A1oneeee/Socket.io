@@ -7,13 +7,15 @@ var server = require('http').createServer(app);
 /* REDIRECT THE SERVER RESSOURCES TO THE DIRECTORY SERVER */
 app.use(express.static(__dirname));
 
-/* CREATE SERVER */
+/* LISTEN SERVER ON PORT 1337 */
 server.listen(1337, () => {
-    console.log('Server started at port: 1337');
+    console.log('### Server started at port: 1337 ...');
 });
 
 
-// IO
+/* IO
+ * Events that will be use by the SOCKET
+ */
 var io = require('socket.io')(server);
 
 io.sockets.on('connection', function(socket){

@@ -10,3 +10,6 @@
 
 ## Historique de messages avec lien BDD (MongoDB)
 ![image](https://github.com/A1oneeee/Socket.io/assets/116378179/73f43f1a-36e5-43c0-ad75-59350c9884a3)
+
+## Message privé et leur stockage
+![image](https://github.com/A1oneeee/Socket.io/assets/116378179/ecb1c82f-20c3-4d2e-bc0f-e3bbcbbf456d)

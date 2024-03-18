@@ -8,3 +8,5 @@
 ## Is Writting...
 ![image](https://github.com/A1oneeee/Socket.io/assets/116378179/424e255e-2de2-4bf3-aa85-42889b59fa16)
 
+## Historique de messages avec lien BDD (MongoDB)
+![image](https://github.com/A1oneeee/Socket.io/assets/116378179/73f43f1a-36e5-43c0-ad75-59350c9884a3)

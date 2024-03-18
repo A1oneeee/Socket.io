@@ -20,7 +20,7 @@
         </div>
         <div id="isWritting"></div>
         <form id="chartForm">
-            <input type="text" id="msgInput" autofocus onkeypress="writting(this)" onblur="notWritting()">
+            <input type="text" id="msgInput" autofocus oninput="writting(this)" onblur="notWritting()">
             <input type="submit" id="btnSend" value="Envoyer">
         </form>
     </div>

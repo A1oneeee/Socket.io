@@ -40,6 +40,16 @@ socket.on('newMessageAll', (content) => {
     createElementFunction('newMessageAll', content);
 });
 
+socket.on('oldMessages', (messages) => {
+    messages.forEach(message => {
+        if(message.sender === pseudo){
+            createElementFunction('oldMessagesMe', message);
+        } else {
+            createElementFunction('oldMessages', message);
+        }
+    });
+});
+
 socket.on('writting', (pseudo) => {
     document.getElementById('isWritting').textContent = pseudo + ' écrit...';
 });
@@ -59,7 +69,7 @@ function writting(element){
     if(element.value.length > 0){
         socket.emit('writting', pseudo);
     }
-}
+};
 
 function notWritting(){
     socket.emit('notWritting');
@@ -96,7 +106,21 @@ function createElementFunction(element, content){
             newElement.innerHTML = content.pseudo + ': ' + content.message;
             document.getElementById('msgContainer').appendChild(newElement);
             break;
+
+
+
+        case 'oldMessages':
+            newElement.classList.add(element, 'message');
+            newElement.innerHTML = content.sender + ': ' + content.content;
+            document.getElementById('msgContainer').appendChild(newElement);
+            break;
         
+        case 'oldMessagesMe':
+            newElement.classList.add('newMessageMe', 'message');
+            newElement.innerHTML = content.sender + ': ' + content.content;
+            document.getElementById('msgContainer').appendChild(newElement);
+            break; 
+
 
     }
 
